@@ -1,0 +1,154 @@
+Public Class Calculadora
+    Dim V1 As Double
+    Dim V2 As Double
+    Dim Res As Double
+    Dim Ope As Double
+    Dim Dec As Double
+    Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
+        TextBox1.Text = TextBox1.Text & " / "
+        Ope = 4
+        V1 = Val(TextBox2.Text)
+        TextBox2.Clear()
+        Dec = 0
+        If Dec = 0 Then
+            Button11.Enabled = True
+        End If
+    End Sub
+    Private Sub Button16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button16.Click
+        TextBox1.Text = TextBox1.Text & " x "
+        Ope = 3
+        V1 = Val(TextBox2.Text)
+        TextBox2.Clear()
+        Dec = 0
+        If Dec = 0 Then
+            Button11.Enabled = True
+        End If
+    End Sub
+    Private Sub Button15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button15.Click
+        TextBox1.Text = TextBox1.Text & " - "
+        Ope = 2
+        V1 = Val(TextBox2.Text)
+        TextBox2.Clear()
+        Dec = 0
+        If Dec = 0 Then
+            Button11.Enabled = True
+        End If
+    End Sub
+    Private Sub Button14_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button14.Click
+        TextBox1.Text = TextBox1.Text & " + "
+        Ope = 1
+        V1 = Val(TextBox2.Text)
+        TextBox2.Clear()
+        Dec = 0
+        If Dec = 0 Then
+            Button11.Enabled = True
+        End If
+    End Sub
+    Private Sub Button17_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button17.Click
+        TextBox2.Clear()
+        TextBox1.Clear()
+        V1 = 0
+        V2 = 0
+    End Sub
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        TextBox2.Text = TextBox2.Text & "9"
+        TextBox1.Text = TextBox1.Text & "9"
+    End Sub
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        TextBox2.Text = TextBox2.Text & "6"
+        TextBox1.Text = TextBox1.Text & "6"
+    End Sub
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        TextBox2.Text = TextBox2.Text & "3"
+        TextBox1.Text = TextBox1.Text & "3"
+    End Sub
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+        V2 = Val(TextBox2.Text)
+        If Ope = 1 Then
+            Res = V1 + V2
+            TextBox2.Clear()
+            TextBox2.Text = TextBox2.Text & Res
+            TextBox1.Clear()
+            TextBox1.Text = TextBox1.Text & Res
+            V1 = 0
+            V2 = 0
+        Else
+            If Ope = 2 Then
+                Res = V1 - V2
+                TextBox2.Clear()
+                TextBox2.Text = TextBox2.Text & Res
+                TextBox1.Clear()
+                TextBox1.Text = TextBox1.Text & Res
+                V1 = 0
+                V2 = 0
+            Else
+                If Ope = 3 Then
+                    Res = V1 * V2
+                    TextBox2.Clear()
+                    TextBox2.Text = TextBox2.Text & Res
+                    TextBox1.Clear()
+                    TextBox1.Text = TextBox1.Text & Res
+                    V1 = 0
+                    V2 = 0
+                Else
+                    If Ope = 4 Then
+                        Res = V1 / V2
+                        TextBox2.Clear()
+                        TextBox2.Text = TextBox2.Text & Res
+                        TextBox1.Clear()
+                        TextBox1.Text = TextBox1.Text & Res
+                        V1 = 0
+                        V2 = 0
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+    Private Sub Button11_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button11.Click
+        TextBox2.Text = TextBox2.Text & "."
+        TextBox1.Text = TextBox1.Text & "."
+        Dec = 1
+        If Dec = 1 Then
+            Button11.Enabled = False
+        End If
+    End Sub
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        TextBox2.Text = TextBox2.Text & "2"
+        TextBox1.Text = TextBox1.Text & "2"
+    End Sub
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        TextBox2.Text = TextBox2.Text & "5"
+        TextBox1.Text = TextBox1.Text & "5"
+    End Sub
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        TextBox2.Text = TextBox2.Text & "8"
+        TextBox1.Text = TextBox1.Text & "8"
+    End Sub
+    Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button12.Click
+        TextBox2.Text = TextBox2.Text & "0"
+        TextBox1.Text = TextBox1.Text & "0"
+    End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        TextBox2.Text = TextBox2.Text & "7"
+        TextBox1.Text = TextBox1.Text & "7"
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        TextBox2.Text = TextBox2.Text & "4"
+        TextBox1.Text = TextBox1.Text & "4"
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        TextBox2.Text = TextBox2.Text & "1"
+        TextBox1.Text = TextBox1.Text & "1"
+    End Sub
+
+    Private Sub TextBox2_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+End Class
