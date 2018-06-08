@@ -1,9 +1,6 @@
 Public Class Calculadora
-    Dim V1 As Double
-    Dim V2 As Double
-    Dim Res As Double
-    Dim Ope As Double
-    Dim Dec As Double
+    Dim V1 As Double, V2 As Double, Res As Double, Ope As Double, Dec As Double
+ 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
         TextBox1.Text = TextBox1.Text & " / "
         Ope = 4
